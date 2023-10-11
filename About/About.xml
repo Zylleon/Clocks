@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ModMetaData>
+  <name>Furniture</name>
+  <author>Zylle</author>
+  <supportedVersions><li>1.4</li></supportedVersions>
+  <packageId>zylle.Furniture</packageId>
+  <description>
+  Description goes here.
+</description>
+</ModMetaData>

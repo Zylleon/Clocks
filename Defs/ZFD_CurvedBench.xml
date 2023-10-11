@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+   
+  <ThingDef ParentName="FurnitureWithQualityBase">
+    <defName>ZFD_CurvedBench</defName>
+    <label>curved bench</label>
+    <description>A long bench on which people may sit. This bench has attractive curved edges and corners.</description>
+    <graphicData>
+      <texPath>ZFD/RoundedBench/RoundedBench_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <linkType>Basic</linkType>
+      <linkFlags>
+        <li>Custom7</li>
+      </linkFlags>
+      <damageData>
+        <cornerTL>Damage/Corner</cornerTL>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBL>Damage/Corner</cornerBL>
+        <cornerBR>Damage/Corner</cornerBR>
+        <edgeTop>Damage/Edge</edgeTop>
+        <edgeBot>Damage/Edge</edgeBot>
+        <edgeLeft>Damage/Edge</edgeLeft>
+        <edgeRight>Damage/Edge</edgeRight>
+      </damageData>
+    </graphicData>
+    <placingDraggableDimensions>1</placingDraggableDimensions>
+    <uiIconPath>ZFD/RoundedBench/RoundedBench_Icon</uiIconPath>
+    <altitudeLayer>Building</altitudeLayer>
+    <statBases>
+      <MaxHitPoints>85</MaxHitPoints>
+      <WorkToBuild>600</WorkToBuild>
+      <Mass>3</Mass>
+      <Flammability>1.0</Flammability>
+      <Beauty>1</Beauty>
+      <Comfort>0.5</Comfort>
+    </statBases>
+    <rotatable>false</rotatable>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <stuffCategories>
+      <li>Metallic</li>
+      <li>Woody</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <building>
+      <blueprintGraphicData>
+        <texPath>ZFD/RoundedBench/RoubdedBench_Blueprint_Atlas</texPath>
+      </blueprintGraphicData>
+      <isSittable>true</isSittable>
+      <paintable>true</paintable>
+    </building>
+    <costStuffCount>30</costStuffCount>
+    <pathCost>30</pathCost>
+    <fillPercent>0.20</fillPercent>
+    <!-- <researchPrerequisites> -->
+      <!-- <li>MF_BasicFurniture</li> -->
+    <!-- </researchPrerequisites> -->
+    <!-- <uiIconOffset>(0, -0.05)</uiIconOffset> -->
+    <designationCategory>Furniture</designationCategory>
+  </ThingDef>
+
+</Defs>
