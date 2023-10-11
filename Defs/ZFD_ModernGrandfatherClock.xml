@@ -5,6 +5,7 @@
     <defName>ZFD_ModernGrandfatherClock</defName>
     <label>modern grandfather clock</label>
     <description>A tall clock that tells the time. Has a modern aesthetic.</description>
+	<tickerType>Normal</tickerType>
     <graphicData>
       <texPath>ZFD/ModernGrandfatherClock/ModernGrandfatherClock</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
@@ -49,16 +50,33 @@
     <building>
       <paintable>true</paintable>
     </building>
-	<!--
-    <comps>
-      <li Class="CompProperties_Facility">
-        <statOffsets>
-          <Comfort>0.05</Comfort>
-        </statOffsets>
-        <maxSimultaneous>1</maxSimultaneous>
-        <maxDistance>6</maxDistance>
-      </li>
-    </comps>
-	-->
+	<comps>
+		<li Class="ZClocks.CompProperties_Clock">
+			<bellRingTimes>
+				<li>0</li>
+				<li>12</li>
+			</bellRingTimes>
+			<bellSound>ZFD_ModernGrandfatherClockBell</bellSound>
+		</li>
+	</comps>
   </ThingDef>
+  
+  <SoundDef>
+		<defName>ZFD_ModernGrandfatherClockBell</defName>
+		<context>MapOnly</context>
+		<eventNames/>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Folder">
+						<clipFolderPath>ZFD_Sounds/ModernGrandfatherClockBell</clipFolderPath>
+					</li>
+				</grains>
+				<volumeRange>160~160</volumeRange>
+				<distRange>10~50</distRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+
 </Defs>

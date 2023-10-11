@@ -22,7 +22,7 @@ namespace ZClocks
             int hour = GenLocalDate.HourInteger(parent.Map);
             if (Props.bellRingTimes.Contains(hour) && Find.TickManager.TicksAbs % 2500 == 0)
             {
-                Log.Message("Ringing the bell");
+                //Log.Message("Ringing the bell");
                 Props.bellSound.PlayOneShot(SoundInfo.InMap(new TargetInfo(parent.Position, parent.Map)));
             }
         }
