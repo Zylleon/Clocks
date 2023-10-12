@@ -1,20 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-	<ThingDef ParentName="FurnitureBase">
-		<defName>ZCL_AlarmClock</defName>
-		<label>classic alarm clock</label>
-		<description>A small clock that can be placed on tables. The alarm rings at 6am.</description>
+	<ThingDef ParentName="ArtableFurnitureBase">
+		<defName>ZCL_CuckooClock</defName>
+		<label>cuckoo clock</label>
+		<description>A free-standing cuckoo clock that tells the time. Rings at 6am and 6 pm.</description>
 		<tickerType>Normal</tickerType>
-		<placeWorkers>
-		  <li>ZClocks.PlaceWorker_OnSurface</li>
-		</placeWorkers>
-		<altitudeLayer>Item</altitudeLayer>
 		<graphicData>
-			<texPath>ZCL/AlarmClock/AlarmClock</texPath>
+			<texPath>ZCL/CuckooClock/CuckooClock</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>(0.8,0.8)</drawSize>
-			<drawOffset>(0,0,0.35)</drawOffset>
+			<drawSize>(2.2,2.2)</drawSize>
 			<damageData>
 				<cornerTL>Damage/Corner</cornerTL>
 				<cornerTR>Damage/Corner</cornerTR>
@@ -24,9 +19,10 @@
 			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
 		<!-- <uiIconScale>0.5</uiIconScale> -->
+		<altitudeLayer>Building</altitudeLayer>
 		<passability>PassThroughOnly</passability>
 		<fillPercent>0.4</fillPercent>
-		<castEdgeShadows>false</castEdgeShadows>
+		<castEdgeShadows>true</castEdgeShadows>
 		<pathCost>42</pathCost>
 		<stuffCategories>
 			<li>Metallic</li>
@@ -34,18 +30,16 @@
 			<li>Stony</li>
 		</stuffCategories>
 		<defaultPlacingRot>South</defaultPlacingRot>
-		<costStuffCount>20</costStuffCount>
+		<costStuffCount>50</costStuffCount>
 		<statBases>
 			<MaxHitPoints>120</MaxHitPoints>
 			<Mass>15</Mass>
 			<WorkToBuild>2000</WorkToBuild>
 			<Flammability>1.0</Flammability>
-			<Beauty>5</Beauty>
+			<Beauty>50</Beauty>
 		</statBases>
 		<size>(1,1)</size>
 		<uiOrder>2900</uiOrder>
-		<!-- <staticSunShadowHeight>0.5</staticSunShadowHeight> -->
-		<!-- <surfaceType>Item</surfaceType> -->
 		<canOverlapZones>false</canOverlapZones>
 
 		<researchPrerequisites>
@@ -53,15 +47,15 @@
 		</researchPrerequisites>
 		<building>
 			<paintable>true</paintable>
-			<isEdifice>false</isEdifice>
 		</building>
 
 		<comps>
 			<li Class="ZClocks.CompProperties_Clock">
 				<bellRingTimes>
 					<li>6</li>
+					<li>18</li>
 				</bellRingTimes>
-				<bellSound>ZCL_AlarmClockBell</bellSound>
+				<bellSound>ZCL_CuckooClockBell</bellSound>
 			</li>
 		</comps>
 
@@ -70,18 +64,18 @@
 
 
 	<SoundDef>
-		<defName>ZCL_AlarmClockBell</defName>
+		<defName>ZCL_CuckooClockBell</defName>
 		<context>MapOnly</context>
 		<eventNames/>
 		<subSounds>
 			<li>
 				<grains>
 					<li Class="AudioGrain_Folder">
-						<clipFolderPath>ZCL_Sounds/AlarmClockBell</clipFolderPath>
+						<clipFolderPath>ZCL_Sounds/CuckooClockBell</clipFolderPath>
 					</li>
 				</grains>
-				<volumeRange>35~35</volumeRange>
-				<distRange>10~40</distRange>
+				<volumeRange>40~40</volumeRange>
+				<distRange>10~50</distRange>
 			</li>
 		</subSounds>
 	</SoundDef>

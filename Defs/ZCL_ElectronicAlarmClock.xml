@@ -23,7 +23,7 @@
 			</damageData>
 			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
-		<uiIconScale>0.5</uiIconScale>
+		<!-- <uiIconScale>0.5</uiIconScale> -->
 		<passability>PassThroughOnly</passability>
 		<fillPercent>0.4</fillPercent>
 		<castEdgeShadows>false</castEdgeShadows>
