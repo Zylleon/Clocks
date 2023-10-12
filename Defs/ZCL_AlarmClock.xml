@@ -1,15 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Defs>
 
-	<ThingDef ParentName="ArtableFurnitureBase">
-		<defName>ZFD_GrandfatherClock</defName>
-		<label>grandfather clock</label>
-		<description>A tall clock that tells the time.</description>
+	<ThingDef ParentName="FurnitureBase">
+		<defName>ZCL_AlarmClock</defName>
+		<label>classic alarm clock</label>
+		<description>A small clock that can be placed on tables. The alarm rings at 6am.</description>
 		<tickerType>Normal</tickerType>
+		<placeWorkers>
+		  <li>ZClocks.PlaceWorker_OnSurface</li>
+		</placeWorkers>
+		<altitudeLayer>Item</altitudeLayer>
 		<graphicData>
-			<texPath>ZFD/GrandfatherClock/GrandfatherClock</texPath>
+			<texPath>ZCL/AlarmClock/AlarmClock</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>(3,3)</drawSize>
+			<drawSize>(0.8,0.8)</drawSize>
+			<drawOffset>(0,0,0.35)</drawOffset>
 			<damageData>
 				<cornerTL>Damage/Corner</cornerTL>
 				<cornerTR>Damage/Corner</cornerTR>
@@ -19,7 +24,6 @@
 			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
 		<uiIconScale>0.5</uiIconScale>
-		<altitudeLayer>Building</altitudeLayer>
 		<passability>PassThroughOnly</passability>
 		<fillPercent>0.4</fillPercent>
 		<castEdgeShadows>true</castEdgeShadows>
@@ -30,13 +34,13 @@
 			<li>Stony</li>
 		</stuffCategories>
 		<defaultPlacingRot>South</defaultPlacingRot>
-		<costStuffCount>50</costStuffCount>
+		<costStuffCount>20</costStuffCount>
 		<statBases>
 			<MaxHitPoints>120</MaxHitPoints>
 			<Mass>15</Mass>
 			<WorkToBuild>2000</WorkToBuild>
 			<Flammability>1.0</Flammability>
-			<Beauty>50</Beauty>
+			<Beauty>5</Beauty>
 		</statBases>
 		<size>(1,1)</size>
 		<uiOrder>2900</uiOrder>
@@ -49,15 +53,15 @@
 		</researchPrerequisites>
 		<building>
 			<paintable>true</paintable>
+			<isEdifice>false</isEdifice>
 		</building>
 
 		<comps>
 			<li Class="ZClocks.CompProperties_Clock">
 				<bellRingTimes>
-					<li>0</li>
-					<li>12</li>
+					<li>6</li>
 				</bellRingTimes>
-				<bellSound>ZFD_GrandfatherClockBell</bellSound>
+				<bellSound>ZCL_AlarmClockBell</bellSound>
 			</li>
 		</comps>
 
@@ -66,18 +70,18 @@
 
 
 	<SoundDef>
-		<defName>ZFD_GrandfatherClockBell</defName>
+		<defName>ZCL_AlarmClockBell</defName>
 		<context>MapOnly</context>
 		<eventNames/>
 		<subSounds>
 			<li>
 				<grains>
 					<li Class="AudioGrain_Folder">
-						<clipFolderPath>ZFD_Sounds/GrandfatherClockBell</clipFolderPath>
+						<clipFolderPath>ZCL_Sounds/AlarmClockBell</clipFolderPath>
 					</li>
 				</grains>
-				<volumeRange>260~260</volumeRange>
-				<distRange>10~50</distRange>
+				<volumeRange>35~35</volumeRange>
+				<distRange>10~40</distRange>
 			</li>
 		</subSounds>
 	</SoundDef>

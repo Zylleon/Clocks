@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThingDef ParentName="ArtableFurnitureBase">
+		<defName>ZCL_GrandfatherClock</defName>
+		<label>grandfather clock</label>
+		<description>A tall clock that tells the time. Tolls at noon and midnight.</description>
+		<tickerType>Normal</tickerType>
+		<graphicData>
+			<texPath>ZCL/GrandfatherClock/GrandfatherClock</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(3,3)</drawSize>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<uiIconScale>0.5</uiIconScale>
+		<altitudeLayer>Building</altitudeLayer>
+		<passability>PassThroughOnly</passability>
+		<fillPercent>0.4</fillPercent>
+		<castEdgeShadows>true</castEdgeShadows>
+		<pathCost>42</pathCost>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Woody</li>
+			<li>Stony</li>
+		</stuffCategories>
+		<defaultPlacingRot>South</defaultPlacingRot>
+		<costStuffCount>50</costStuffCount>
+		<statBases>
+			<MaxHitPoints>120</MaxHitPoints>
+			<Mass>15</Mass>
+			<WorkToBuild>2000</WorkToBuild>
+			<Flammability>1.0</Flammability>
+			<Beauty>50</Beauty>
+		</statBases>
+		<size>(1,1)</size>
+		<uiOrder>2900</uiOrder>
+		<staticSunShadowHeight>0.5</staticSunShadowHeight>
+		<!-- <surfaceType>Item</surfaceType> -->
+		<canOverlapZones>false</canOverlapZones>
+
+		<researchPrerequisites>
+			<li>ComplexFurniture</li>
+		</researchPrerequisites>
+		<building>
+			<paintable>true</paintable>
+		</building>
+
+		<comps>
+			<li Class="ZClocks.CompProperties_Clock">
+				<bellRingTimes>
+					<li>0</li>
+					<li>12</li>
+				</bellRingTimes>
+				<bellSound>ZCL_GrandfatherClockBell</bellSound>
+			</li>
+		</comps>
+
+	</ThingDef>
+
+
+
+	<SoundDef>
+		<defName>ZCL_GrandfatherClockBell</defName>
+		<context>MapOnly</context>
+		<eventNames/>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Folder">
+						<clipFolderPath>ZCL_Sounds/GrandfatherClockBell</clipFolderPath>
+					</li>
+				</grains>
+				<volumeRange>40~40</volumeRange>
+				<distRange>10~50</distRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+
+
+</Defs>
