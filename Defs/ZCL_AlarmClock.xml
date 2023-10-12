@@ -26,7 +26,7 @@
 		<uiIconScale>0.5</uiIconScale>
 		<passability>PassThroughOnly</passability>
 		<fillPercent>0.4</fillPercent>
-		<castEdgeShadows>true</castEdgeShadows>
+		<castEdgeShadows>false</castEdgeShadows>
 		<pathCost>42</pathCost>
 		<stuffCategories>
 			<li>Metallic</li>
@@ -44,7 +44,7 @@
 		</statBases>
 		<size>(1,1)</size>
 		<uiOrder>2900</uiOrder>
-		<staticSunShadowHeight>0.5</staticSunShadowHeight>
+		<!-- <staticSunShadowHeight>0.5</staticSunShadowHeight> -->
 		<!-- <surfaceType>Item</surfaceType> -->
 		<canOverlapZones>false</canOverlapZones>
 

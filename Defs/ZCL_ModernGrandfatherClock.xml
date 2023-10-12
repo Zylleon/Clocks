@@ -10,6 +10,9 @@
       <texPath>ZCL/ModernGrandfatherClock/ModernGrandfatherClock</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <drawSize>(3,3)</drawSize>
+      <!-- <shadowData> -->
+        <!-- <volume>(0.3, 0.6, 0.3)</volume> -->
+      <!-- </shadowData> -->
       <damageData>
         <cornerTL>Damage/Corner</cornerTL>
         <cornerTR>Damage/Corner</cornerTR>
@@ -40,7 +43,7 @@
     </statBases>
     <size>(1,1)</size>
     <uiOrder>2900</uiOrder>
-    <staticSunShadowHeight>0.5</staticSunShadowHeight>
+    <!-- <staticSunShadowHeight>0.5</staticSunShadowHeight> -->
     <!-- <surfaceType>Item</surfaceType> -->
     <canOverlapZones>false</canOverlapZones>
 
