@@ -23,6 +23,10 @@ namespace ZClocks
             if (Props.bellRingTimes.Contains(hour) && Find.TickManager.TicksAbs % 2500 == 0)
             {
                 //Log.Message("Ringing the bell");
+                if (parent.GetComp<CompPowerTrader>()?.PowerOn == false)
+                {
+                    return;
+                }
                 Props.bellSound.PlayOneShot(SoundInfo.InMap(new TargetInfo(parent.Position, parent.Map)));
             }
         }
