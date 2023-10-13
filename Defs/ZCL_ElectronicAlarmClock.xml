@@ -7,7 +7,7 @@
 		<description>A small clock that can be placed on tables, with a sleek modern aesthetic. The alarm rings at 6am.</description>
 		<tickerType>Normal</tickerType>
 		<placeWorkers>
-		  <li>ZClocks.PlaceWorker_OnSurface</li>
+			<li>ZClocks.PlaceWorker_OnSurface</li>
 		</placeWorkers>
 		<altitudeLayer>Item</altitudeLayer>
 		<graphicData>
@@ -23,7 +23,6 @@
 			</damageData>
 			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
-		<!-- <uiIconScale>0.5</uiIconScale> -->
 		<passability>PassThroughOnly</passability>
 		<fillPercent>0.4</fillPercent>
 		<castEdgeShadows>false</castEdgeShadows>
@@ -42,8 +41,6 @@
 		</statBases>
 		<size>(1,1)</size>
 		<uiOrder>2900</uiOrder>
-		<!-- <staticSunShadowHeight>0.5</staticSunShadowHeight> -->
-		<!-- <surfaceType>Item</surfaceType> -->
 		<canOverlapZones>false</canOverlapZones>
 
 		<researchPrerequisites>
@@ -62,22 +59,24 @@
 				</bellRingTimes>
 				<bellSound>ZCL_ElectronicAlarmClockBell</bellSound>
 			</li>
-		  <li Class="CompProperties_Power">
-			<compClass>CompPowerTrader</compClass>
-			<basePowerConsumption>6</basePowerConsumption>
-			<powerUpgrades>
-			  <li>
-				<researchProject>ColoredLights</researchProject>
-				<factor>0.5</factor>
-			  </li>
-			</powerUpgrades>
-		  </li>
-		  <li Class="CompProperties_Glower">
-			<glowRadius>2</glowRadius>
-			<glowColor>(37,189,184,0)</glowColor>
-			<colorPickerEnabled>false</colorPickerEnabled>
-			<darklightToggle>true</darklightToggle>
-		  </li>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>6</basePowerConsumption>
+				<powerUpgrades>
+					<li>
+						<researchProject>ColoredLights</researchProject>
+						<factor>0.5</factor>
+					</li>
+				</powerUpgrades>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+
+			<li Class="CompProperties_Glower">
+				<glowRadius>2</glowRadius>
+				<glowColor>(37,189,184,0)</glowColor>
+				<colorPickerEnabled>false</colorPickerEnabled>
+				<darklightToggle>true</darklightToggle>
+			</li>
 		</comps>
 
 	</ThingDef>

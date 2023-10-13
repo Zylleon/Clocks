@@ -16,9 +16,6 @@
 				<cornerBL>Damage/Corner</cornerBL>
 				<cornerBR>Damage/Corner</cornerBR>
 			</damageData>
-			  <!-- <shadowData> -->
-				<!-- <volume>(0.3, 0.6, 0.3)</volume> -->
-			  <!-- </shadowData> -->
 			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
 		<uiIconScale>0.5</uiIconScale>
@@ -43,8 +40,6 @@
 		</statBases>
 		<size>(1,1)</size>
 		<uiOrder>2900</uiOrder>
-		<!-- <staticSunShadowHeight>0.5</staticSunShadowHeight> -->
-		<!-- <surfaceType>Item</surfaceType> -->
 		<canOverlapZones>false</canOverlapZones>
 
 		<researchPrerequisites>

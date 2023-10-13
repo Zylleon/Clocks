@@ -36,7 +36,7 @@
 			<Mass>15</Mass>
 			<WorkToBuild>2000</WorkToBuild>
 			<Flammability>1.0</Flammability>
-			<Beauty>50</Beauty>
+			<Beauty>40</Beauty>
 		</statBases>
 		<size>(1,1)</size>
 		<uiOrder>2900</uiOrder>
