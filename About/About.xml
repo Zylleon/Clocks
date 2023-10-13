@@ -5,6 +5,8 @@
   <supportedVersions><li>1.4</li></supportedVersions>
   <packageId>zylle.Clocks</packageId>
   <description>
-  Description goes here.
+Adds clocks! Clocks will chime at specific hours, waking up any nearby pawns in the same room.
+
+Safe to add mid-game.
 </description>
 </ModMetaData>
