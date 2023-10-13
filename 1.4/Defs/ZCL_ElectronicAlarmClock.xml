@@ -2,16 +2,16 @@
 <Defs>
 
 	<ThingDef ParentName="FurnitureBase">
-		<defName>ZCL_AlarmClock</defName>
-		<label>classic alarm clock</label>
-		<description>A small clock that can be placed on tables. The alarm rings at 6am.</description>
+		<defName>ZCL_ElectronicAlarmClock</defName>
+		<label>electronic alarm clock</label>
+		<description>A small clock that can be placed on tables, with a sleek modern aesthetic. The alarm rings at 6am.</description>
 		<tickerType>Normal</tickerType>
 		<placeWorkers>
-		  <li>ZClocks.PlaceWorker_OnSurface</li>
+			<li>ZClocks.PlaceWorker_OnSurface</li>
 		</placeWorkers>
 		<altitudeLayer>Item</altitudeLayer>
 		<graphicData>
-			<texPath>ZCL/AlarmClock/AlarmClock</texPath>
+			<texPath>ZCL/ElectronicAlarmClock/ElectronicAlarmClock</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
 			<drawSize>(0.8,0.8)</drawSize>
 			<drawOffset>(0,0,0.35)</drawOffset>
@@ -29,8 +29,6 @@
 		<pathCost>42</pathCost>
 		<stuffCategories>
 			<li>Metallic</li>
-			<li>Woody</li>
-			<li>Stony</li>
 		</stuffCategories>
 		<defaultPlacingRot>South</defaultPlacingRot>
 		<costStuffCount>20</costStuffCount>
@@ -39,7 +37,7 @@
 			<Mass>15</Mass>
 			<WorkToBuild>2000</WorkToBuild>
 			<Flammability>1.0</Flammability>
-			<Beauty>5</Beauty>
+			<Beauty>8</Beauty>
 		</statBases>
 		<size>(1,1)</size>
 		<uiOrder>2900</uiOrder>
@@ -47,6 +45,7 @@
 
 		<researchPrerequisites>
 			<li>ComplexFurniture</li>
+			<li>Electricity</li>
 		</researchPrerequisites>
 		<building>
 			<paintable>true</paintable>
@@ -58,7 +57,25 @@
 				<bellRingTimes>
 					<li>6</li>
 				</bellRingTimes>
-				<bellSound>ZCL_AlarmClockBell</bellSound>
+				<bellSound>ZCL_ElectronicAlarmClockBell</bellSound>
+			</li>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>6</basePowerConsumption>
+				<powerUpgrades>
+					<li>
+						<researchProject>ColoredLights</researchProject>
+						<factor>0.5</factor>
+					</li>
+				</powerUpgrades>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+
+			<li Class="CompProperties_Glower">
+				<glowRadius>2</glowRadius>
+				<glowColor>(37,189,184,0)</glowColor>
+				<colorPickerEnabled>false</colorPickerEnabled>
+				<darklightToggle>true</darklightToggle>
 			</li>
 		</comps>
 
@@ -67,17 +84,17 @@
 
 
 	<SoundDef>
-		<defName>ZCL_AlarmClockBell</defName>
+		<defName>ZCL_ElectronicAlarmClockBell</defName>
 		<context>MapOnly</context>
 		<eventNames/>
 		<subSounds>
 			<li>
 				<grains>
 					<li Class="AudioGrain_Folder">
-						<clipFolderPath>ZCL_Sounds/AlarmClockBell</clipFolderPath>
+						<clipFolderPath>ZCL_Sounds/ElectronicAlarmClockBell</clipFolderPath>
 					</li>
 				</grains>
-				<volumeRange>35~35</volumeRange>
+				<volumeRange>19~19</volumeRange>
 				<distRange>10~40</distRange>
 			</li>
 		</subSounds>

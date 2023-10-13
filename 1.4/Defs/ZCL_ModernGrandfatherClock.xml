@@ -2,12 +2,12 @@
 <Defs>
 
 	<ThingDef ParentName="ArtableFurnitureBase">
-		<defName>ZCL_GrandfatherClock</defName>
-		<label>grandfather clock</label>
-		<description>A tall clock that tells the time. Tolls at noon and midnight.</description>
+		<defName>ZCL_ModernGrandfatherClock</defName>
+		<label>modern grandfather clock</label>
+		<description>A tall clock that tells the time. Has a modern aesthetic. Tolls at noon and midnight.</description>
 		<tickerType>Normal</tickerType>
 		<graphicData>
-			<texPath>ZCL/GrandfatherClock/GrandfatherClock</texPath>
+			<texPath>ZCL/ModernGrandfatherClock/ModernGrandfatherClock</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
 			<drawSize>(3,3)</drawSize>
 			<damageData>
@@ -48,38 +48,45 @@
 		<building>
 			<paintable>true</paintable>
 		</building>
-
 		<comps>
+			<li Class="CompProperties_Power">
+				<compClass>CompPowerTrader</compClass>
+				<basePowerConsumption>6</basePowerConsumption>
+				<powerUpgrades>
+					<li>
+						<researchProject>ColoredLights</researchProject>
+						<factor>0.5</factor>
+					</li>
+				</powerUpgrades>
+			</li>
+			<li Class="CompProperties_Flickable"/>
+
 			<li Class="ZClocks.CompProperties_Clock">
 				<bellRingTimes>
 					<li>0</li>
 					<li>12</li>
 				</bellRingTimes>
-				<bellSound>ZCL_GrandfatherClockBell</bellSound>
+				<bellSound>ZCL_ModernGrandfatherClockBell</bellSound>
 			</li>
 		</comps>
-
 	</ThingDef>
 
-
-
 	<SoundDef>
-		<defName>ZCL_GrandfatherClockBell</defName>
+		<defName>ZCL_ModernGrandfatherClockBell</defName>
 		<context>MapOnly</context>
 		<eventNames/>
 		<subSounds>
 			<li>
 				<grains>
 					<li Class="AudioGrain_Folder">
-						<clipFolderPath>ZCL_Sounds/GrandfatherClockBell</clipFolderPath>
+						<clipFolderPath>ZCL_Sounds/ModernGrandfatherClockBell</clipFolderPath>
 					</li>
 				</grains>
-				<volumeRange>40~40</volumeRange>
+				<volumeRange>22~22</volumeRange>
 				<distRange>10~50</distRange>
 			</li>
 		</subSounds>
 	</SoundDef>
-
 
 
 </Defs>
