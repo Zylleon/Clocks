@@ -22,12 +22,30 @@ namespace ZClocks
             int hour = GenLocalDate.HourInteger(parent.Map);
             if (Props.bellRingTimes.Contains(hour) && Find.TickManager.TicksAbs % 2500 == 0)
             {
-                //Log.Message("Ringing the bell");
                 if (parent.GetComp<CompPowerTrader>()?.PowerOn == false)
                 {
                     return;
                 }
+
                 Props.bellSound.PlayOneShot(SoundInfo.InMap(new TargetInfo(parent.Position, parent.Map)));
+
+                Room room = parent.GetRoom();
+
+                List<Thing> roomThings = room.ContainedAndAdjacentThings;
+                foreach (Thing t in roomThings)
+                {
+                    if (t.def.race?.Humanlike == true && IntVec3Utility.DistanceTo(t.Position, parent.Position) <= Props.alarmRadius)
+                    {
+                        Pawn pawn = (Pawn)t;
+                        if (pawn.CurJobDef == JobDefOf.LayDown)
+                        {
+                            pawn.drafter.Drafted = true;
+                            pawn.drafter.Drafted = false;
+                            PawnUtility.ForceWait(pawn, 200);
+                        }
+                    }
+                }
+
             }
         }
     }
@@ -37,6 +55,8 @@ namespace ZClocks
         public SoundDef bellSound;
 
         public List<int> bellRingTimes;
+
+        public float alarmRadius = 4;
 
         public CompProperties_Clock()
         {
