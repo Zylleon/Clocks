@@ -78,7 +78,7 @@
 				<darklightToggle>true</darklightToggle>
 			</li>
 		</comps>
-
+		<clearBuildingArea>false</clearBuildingArea>
 	</ThingDef>
 
 

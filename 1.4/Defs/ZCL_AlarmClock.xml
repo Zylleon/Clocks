@@ -61,6 +61,7 @@
 				<bellSound>ZCL_AlarmClockBell</bellSound>
 			</li>
 		</comps>
+		<clearBuildingArea>false</clearBuildingArea>
 
 	</ThingDef>
 
