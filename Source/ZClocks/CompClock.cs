@@ -32,21 +32,25 @@ namespace ZClocks
                 Room room = parent.GetRoom();
 
                 List<Thing> roomThings = room.ContainedAndAdjacentThings;
-                foreach (Thing t in roomThings)
+                if (roomThings.NullOrEmpty() == false)
                 {
-                    if (t.def.race?.Humanlike == true && IntVec3Utility.DistanceTo(t.Position, parent.Position) <= Props.alarmRadius)
+                    foreach (Thing t in roomThings)
                     {
-                        Pawn pawn = (Pawn)t;
-                        if (pawn.CurJobDef == JobDefOf.LayDown)
+                        if (t.def.race?.Humanlike == true && IntVec3Utility.DistanceTo(t.Position, parent.Position) <= Props.alarmRadius)
                         {
-                            pawn.drafter.Drafted = true;
-                            pawn.drafter.Drafted = false;
-                            PawnUtility.ForceWait(pawn, 200);
+                            Pawn pawn = (Pawn)t;
+                            if (pawn.CurJobDef == JobDefOf.LayDown)
+                            {
+                                pawn.drafter.Drafted = true;
+                                pawn.drafter.Drafted = false;
+                                PawnUtility.ForceWait(pawn, 200);
+                            }
                         }
                     }
                 }
-
+                
             }
+
         }
     }
 

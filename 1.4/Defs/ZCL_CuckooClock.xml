@@ -9,7 +9,7 @@
 		<graphicData>
 			<texPath>ZCL/CuckooClock/CuckooClock</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>(2.2,2.2)</drawSize>
+			<drawSize>(2,2)</drawSize>
 			<damageData>
 				<cornerTL>Damage/Corner</cornerTL>
 				<cornerTR>Damage/Corner</cornerTR>
