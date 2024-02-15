@@ -18,7 +18,7 @@
 			</damageData>
 			<shaderType>CutoutComplex</shaderType>
 		</graphicData>
-		<!-- <uiIconScale>0.5</uiIconScale> -->
+		<uiIconScale>0.75</uiIconScale>
 		<altitudeLayer>Building</altitudeLayer>
 		<passability>PassThroughOnly</passability>
 		<fillPercent>0.4</fillPercent>

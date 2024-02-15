@@ -31,7 +31,7 @@ namespace ZClocks
 
                 Room room = parent.GetRoom();
 
-                List<Thing> roomThings = room.ContainedAndAdjacentThings;
+                List<Thing> roomThings = new List<Thing>(room?.ContainedAndAdjacentThings);
                 if (roomThings.NullOrEmpty() == false)
                 {
                     foreach (Thing t in roomThings)
@@ -39,7 +39,7 @@ namespace ZClocks
                         if (t.def.race?.Humanlike == true && IntVec3Utility.DistanceTo(t.Position, parent.Position) <= Props.alarmRadius)
                         {
                             Pawn pawn = (Pawn)t;
-                            if (pawn.CurJobDef == JobDefOf.LayDown)
+                            if (pawn?.CurJobDef == JobDefOf.LayDown)
                             {
                                 pawn.drafter.Drafted = true;
                                 pawn.drafter.Drafted = false;
