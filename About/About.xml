@@ -6,6 +6,7 @@
 	<li>1.4</li>
 	<li>1.5</li>
   </supportedVersions>
+	<modIconPath IgnoreIfNoMatchingField="True">GUI/ZModLogo</modIconPath>
   <packageId>zylle.Clocks</packageId>
   <description>
 Adds clocks! Clocks will chime at specific hours, waking up any nearby pawns in the same room.
