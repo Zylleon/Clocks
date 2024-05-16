@@ -38,7 +38,7 @@ namespace ZClocks
                     {
                         if (t.def.race?.Humanlike == true && IntVec3Utility.DistanceTo(t.Position, parent.Position) <= Props.alarmRadius)
                         {
-                            Pawn pawn = (Pawn)t;
+                            Pawn pawn = t as Pawn;
                             if (pawn?.CurJobDef == JobDefOf.LayDown)
                             {
                                 pawn.drafter.Drafted = true;
