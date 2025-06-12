@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThingDef ParentName="FurnitureBase">
+		<defName>ZCL_AlarmClock</defName>
+		<label>classic alarm clock</label>
+		<description>A small clock that can be placed on tables. The alarm rings at 6am.</description>
+		<tickerType>Normal</tickerType>
+		<placeWorkers>
+		  <li>ZClocks.PlaceWorker_OnSurface</li>
+		</placeWorkers>
+		<altitudeLayer>Item</altitudeLayer>
+		<graphicData>
+			<texPath>ZCL/AlarmClock/AlarmClock</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>(0.8,0.8)</drawSize>
+			<drawOffset>(0,0,0.35)</drawOffset>
+			<damageData>
+				<cornerTL>Damage/Corner</cornerTL>
+				<cornerTR>Damage/Corner</cornerTR>
+				<cornerBL>Damage/Corner</cornerBL>
+				<cornerBR>Damage/Corner</cornerBR>
+			</damageData>
+			<shaderType>CutoutComplex</shaderType>
+		</graphicData>
+		<passability>PassThroughOnly</passability>
+		<fillPercent>0.4</fillPercent>
+		<castEdgeShadows>false</castEdgeShadows>
+		<pathCost>42</pathCost>
+		<stuffCategories>
+			<li>Metallic</li>
+			<li>Woody</li>
+			<li>Stony</li>
+		</stuffCategories>
+		<defaultPlacingRot>South</defaultPlacingRot>
+		<costStuffCount>20</costStuffCount>
+		<statBases>
+			<MaxHitPoints>120</MaxHitPoints>
+			<Mass>15</Mass>
+			<WorkToBuild>2000</WorkToBuild>
+			<Flammability>1.0</Flammability>
+			<Beauty>5</Beauty>
+		</statBases>
+		<size>(1,1)</size>
+		<uiOrder>2900</uiOrder>
+		<canOverlapZones>false</canOverlapZones>
+
+		<researchPrerequisites>
+			<li>ComplexFurniture</li>
+		</researchPrerequisites>
+		<building>
+			<paintable>true</paintable>
+			<isEdifice>false</isEdifice>
+		</building>
+
+		<comps>
+			<li Class="ZClocks.CompProperties_Clock">
+				<bellRingTimes>
+					<li>6</li>
+				</bellRingTimes>
+				<bellSound>ZCL_AlarmClockBell</bellSound>
+			</li>
+		</comps>
+		<clearBuildingArea>false</clearBuildingArea>
+
+	</ThingDef>
+
+
+
+	<SoundDef>
+		<defName>ZCL_AlarmClockBell</defName>
+		<context>MapOnly</context>
+		<eventNames/>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Folder">
+						<clipFolderPath>ZCL_Sounds/AlarmClockBell</clipFolderPath>
+					</li>
+				</grains>
+				<volumeRange>17~17</volumeRange>
+				<distRange>10~40</distRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+
+
+
+</Defs>
