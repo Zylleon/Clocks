@@ -19,6 +19,11 @@ namespace ZClocks
         {
             base.CompTick();
 
+            if (!parent.Spawned)
+            {
+                return;
+            }
+
             int hour = GenLocalDate.HourInteger(parent.Map);
             if (Props.bellRingTimes.Contains(hour) && Find.TickManager.TicksAbs % 2500 == 0)
             {
